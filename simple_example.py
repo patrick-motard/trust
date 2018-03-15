@@ -22,6 +22,7 @@ class TransparentWindow(Gtk.Window):
             self.set_visual(visual)
 
         self.connect("delete-event", Gtk.main_quit)
+        self.set_wmclass("trust", "trust")
         self.set_app_paintable(True)
         self.show_all()
 
